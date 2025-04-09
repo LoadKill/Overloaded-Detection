@@ -1,0 +1,11 @@
+path: data_yolo
+train: images/train
+val: images/val
+
+names:
+  0: 대형차_불법차량
+  1: 대형차_정상차량
+  2: 중형차_불법차량
+  3: 중형차_정상차량
+  4: 소형차_불법차량
+  5: 소형차_정상차량
