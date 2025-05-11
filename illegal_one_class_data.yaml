@@ -1,0 +1,6 @@
+path: /content/Re_One_class_data_yolo/YOLOv8_OneClass_format_data
+train: images/train
+val: images/val
+
+names:
+  0: 불법차량
