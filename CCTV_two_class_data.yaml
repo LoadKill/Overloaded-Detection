@@ -1,7 +1,0 @@
-path: C:/Users/user1/Desktop/overloaded_detection/YOLOv8_twoClass_format_data
-train: images/train
-val: images/val
-
-names:
-  0: legal
-  1: illegal
