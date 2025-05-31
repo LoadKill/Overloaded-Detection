@@ -35,7 +35,7 @@ if not cap.isOpened():
 model = YOLO("yolov8_n.pt")
 model.to('cpu') # 추론 시 cpu 사용, GPU 사용 시 수정.
 
-tracker = DeepSort(max_age=5, n_init=2)
+tracker = DeepSort(max_age=10, n_init=3)
 
 # Classification 모델 load. 포맷 주의.
 onnx_session = onnxruntime.InferenceSession("final_classification.onnx", providers=['CPUExecutionProvider'])  # 현재는 cpu로 추론. GPU 추론 시 변경.
@@ -62,7 +62,7 @@ while True:
         print("프레임을 읽을 수 없습니다.")
         break
 
-    results = model(frame, conf=0.3)[0]
+    results = model(frame, conf=0.3, iou = 0.3)[0]
     detections = []
 
     for box in results.boxes:
